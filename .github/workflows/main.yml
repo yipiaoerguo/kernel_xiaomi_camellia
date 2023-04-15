@@ -19,7 +19,7 @@ jobs:
         arch: arm64
         compiler: clang/11
         defconfig: camellia_defconfig
-        image: Image.gz-dtb
+        image: Image.gz
 
     - name: Release build
       uses: ncipollo/release-action@v1
