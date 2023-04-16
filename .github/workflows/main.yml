@@ -13,7 +13,10 @@ jobs:
          fetch-depth: 0  # 将fetch-depth设置为0，以仅拉取最新版本的仓库
 
     - name: fix error
-      run: git config --global --add safe.directory /github/workspace
+      run:|
+         git config --global user.name "yipiaoerguo"
+         git config --global user.email "2182994665@qq.com"
+
     - name: Android kernel build
       uses: lemniskett/android-kernel-actions@master
       id: build
