@@ -7,8 +7,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout kernel source
+    - name: Checkout repository
       uses: actions/checkout@v2
+      with:
+         fetch-depth: 0  # 将fetch-depth设置为0，以仅拉取最新版本的仓库
+
     - name: fix error
       run: git config --global --add safe.directory /github/workspace
     - name: Android kernel build
