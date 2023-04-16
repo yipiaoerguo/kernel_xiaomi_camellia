@@ -22,7 +22,7 @@ jobs:
       with:
         arch: arm64
         compiler: clang/11
-        defconfig: yuan_config
+        defconfig: camellia_defconfig
         image: Image.gz
 
     - name: Release build
