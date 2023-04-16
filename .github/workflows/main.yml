@@ -22,7 +22,7 @@ jobs:
       with:
         arch: arm64
         compiler: clang/11
-        defconfig: camellia_defconfig
+        defconfig: camellian_stock_defconfig
         image: Image.gz
 
     - name: Release build
