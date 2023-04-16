@@ -12,10 +12,7 @@ jobs:
       with:
          fetch-depth: 0  # 将fetch-depth设置为0，以仅拉取最新版本的仓库
 
-  #  - name: fix error
-   #   run: |
-    #     git config --global user.name "yipiaoerguo"
-     #    git config --global user.email "2182994665@qq.com"
+
 
     - name: Android kernel build
       uses: lemniskett/android-kernel-actions@master
@@ -25,7 +22,7 @@ jobs:
       with:
         arch: arm64
         compiler: clang/11
-        defconfig: camellia_defconfig
+        defconfig: yuan_config
         image: Image.gz
 
     - name: Release build
@@ -33,4 +30,4 @@ jobs:
       with:
         artifacts: ${{ steps.build.outputs.outfile }}
         token: ${{ secrets.GITHUB_TOKEN }} 
-        tag: 3
+        tag: yuanconfig
