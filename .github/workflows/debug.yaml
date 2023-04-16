@@ -13,5 +13,6 @@ jobs:
          fetch-depth: 0  # 将fetch-depth设置为0，以仅拉取最新版本的仓库
     - name: hh
       run: |
-        ls
+        grep -r "0xffffff89af0a0354" .
+
          
