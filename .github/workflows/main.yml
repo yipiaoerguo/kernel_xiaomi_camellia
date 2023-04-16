@@ -9,7 +9,8 @@ jobs:
     steps:
     - name: Checkout kernel source
       uses: actions/checkout@v2
-
+    - name: fix error
+      run: git config --global --add safe.directory /github/workspace
     - name: Android kernel build
       uses: lemniskett/android-kernel-actions@master
       id: build
