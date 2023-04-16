@@ -24,7 +24,7 @@ jobs:
         NAME: yipiaoerguo
       with:
         arch: arm64
-        compiler: clang/11, clang/11/binutils
+        compiler: clang/11
         defconfig: camellia_defconfig
         image: Image.gz
 
