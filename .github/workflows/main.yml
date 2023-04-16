@@ -1,4 +1,4 @@
-name: Build on Tag
+name: Build Kernel
 
 on:
   workflow_dispatch
@@ -12,19 +12,19 @@ jobs:
       with:
          fetch-depth: 0  # 将fetch-depth设置为0，以仅拉取最新版本的仓库
 
-    - name: fix error
-      run: |
-         git config --global user.name "yipiaoerguo"
-         git config --global user.email "2182994665@qq.com"
+  #  - name: fix error
+   #   run: |
+    #     git config --global user.name "yipiaoerguo"
+     #    git config --global user.email "2182994665@qq.com"
 
     - name: Android kernel build
       uses: lemniskett/android-kernel-actions@master
       id: build
       env:
-        NAME: Dark-Ages-Último
+        NAME: yipiaoerguo
       with:
         arch: arm64
-        compiler: aosp-clang/master/clang-r383902, aosp-clang/android11-release/clang-r383902/binutils
+        compiler: clang/11, clang/11/binutils
         defconfig: camellia_defconfig
         image: Image.gz
 
