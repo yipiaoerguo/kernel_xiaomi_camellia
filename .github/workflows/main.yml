@@ -22,7 +22,7 @@ jobs:
       with:
         arch: arm64
         compiler: clang/11
-        defconfig: camellia_gl_defconfig
+        defconfig: yuan_defconfig
         image: Image.gz
 
     - name: Release build
@@ -30,4 +30,4 @@ jobs:
       with:
         artifacts: ${{ steps.build.outputs.outfile }}
         token: ${{ secrets.GITHUB_TOKEN }} 
-        tag: camellia_gl_defconfig2
+        tag: yuan_defconfig
