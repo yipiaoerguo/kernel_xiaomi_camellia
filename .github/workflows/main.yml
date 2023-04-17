@@ -23,11 +23,11 @@ jobs:
         arch: arm64
         compiler: clang/11
         defconfig: camellia_gl_defconfig
-        image: Image.gz
+        image: vmlinux
 
     - name: Release build
       uses: ncipollo/release-action@v1
       with:
         artifacts: ${{ steps.build.outputs.outfile }}
         token: ${{ secrets.GITHUB_TOKEN }} 
-        tag: camellia_gl_defconfig
+        tag: camellia_gl_defconfigvmlinux
