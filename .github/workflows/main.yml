@@ -23,7 +23,7 @@ jobs:
         arch: arm64
         compiler: clang/11
         defconfig: yuan_defconfig
-        image: Image.gz
+        image: Image-dtb
 
     - name: Release build
       uses: ncipollo/release-action@v1
